@@ -759,3 +759,10 @@ footer span a:hover{
       
       
 }
+
+@media only screen and (max-width: 768px) {
+    .services .title::after,
+    .teams .title::after {
+        content: "";
+    }
+}
