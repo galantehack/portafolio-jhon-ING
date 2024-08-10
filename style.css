@@ -1,5 +1,14 @@
 /*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: rgb(97, 20, 220);
+    --secondary-color: #fff;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Ubuntu', sans-serif;
+}
+
+
 body{
     background-color:  #808282e9;
     font-family: sans-serif;
@@ -8,11 +17,13 @@ body{
     
   }
 
-  .social-media {
+ /* Iconos sociales */
+.social-media {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 20px; /* Añadido para un mejor espaciado */
 }
 
 .social-media-icon {
@@ -54,11 +65,21 @@ body{
     .social-media {
         flex-direction: row;
         justify-content: center;
+        gap: 15px; /* Espacio mejorado entre los iconos */
     }
 
     .social-media-icon {
-        font-size: 30px;
-        margin: 10px;
+        font-size: 35px; /* Tamaño reducido para dispositivos medianos */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media {
+        gap: 10px; /* Espacio ajustado en pantallas muy pequeñas */
+    }
+
+    .social-media-icon {
+        font-size: 30px; /* Tamaño ajustado para pantallas pequeñas */
     }
 }
 
@@ -705,26 +726,7 @@ footer span a:hover{
     }
     
     
-    .social-media{
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .social-media-icon{
-        display: inline-block;
-        margin-left: 20px;
-        width: 60px;
-        height: 60px;
-        border: 1px solid rgb(144, 161, 238);
-        border-radius: 50%;
-        text-align: center;
-        color: rgb(124, 152, 226);
-    }
-    
-    .social-media-icon i{
-        font-size: 30px;
-        line-height: 60px;
-    }
+   
     .container{
         margin: auto;
         background-color: white;
