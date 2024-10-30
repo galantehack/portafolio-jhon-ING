@@ -771,6 +771,7 @@ footer span a:hover{
    
     background: linear-gradient(to bottom, #888, #222);
     padding: 60px 0;
+    
 }
 
 .video-content {
@@ -784,11 +785,12 @@ footer span a:hover{
     flex: 1;
     min-width: 280px;
     max-width: 560px;
-    border-radius: 20px; /* Cambiado a 20px para mejor adaptabilidad en pantallas pequeñas */
+    border-radius: 40px; /* Cambiado a 20px para mejor adaptabilidad en pantallas pequeñas */
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 2px;
 }
 
 .gallery:hover {
@@ -799,6 +801,7 @@ footer span a:hover{
 .video-container {
     position: relative;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    
 }
 
 .video-container iframe {
@@ -808,6 +811,7 @@ footer span a:hover{
     width: 100%;
     height: 100%;
     border: none;
+    
 }
 
 .desc {
@@ -842,5 +846,98 @@ footer span a:hover{
 
     .desc {
         font-size: 0.8em; /* Smaller font size for very small screens */
+    }
+}
+
+@keyframes show {
+    from{
+        opacity: 0.8;
+        scale: 70%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%; 
+    }
+}
+
+.gallery {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-fill-mode: both;
+    animation-timeline: --image;
+    animation-name:  show;
+}
+
+.card{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-fill-mode: both;
+    animation-timeline: --image;
+    animation-name:  show;
+}
+
+.card2{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name:  show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.contact{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-fill-mode: both;
+    animation-timeline: --image;
+    animation-name:  show;
+}
+
+.social-media{
+    
+    animation: textShadow 1s ease-in-out 
+        infinite alternate;
+}
+
+@keyframes textShadow {
+    from {
+        text-shadow: 2px 2px #333;
+    }
+
+    to {
+        text-shadow: 10px 10px #333;
+    }
+}
+
+.text-2{
+    
+    animation: textColor 1s ease-in-out 
+        infinite alternate;
+}
+
+@keyframes textColor {
+    from {
+        text-shadow: 2px 2px rgb(97, 20, 220);
+    }
+
+    to {
+        text-shadow: 10px 10px  rgb(97, 20, 220);
+    }
+}
+
+.descarga{
+    
+    animation: textColor 1s ease-in-out 
+        infinite alternate;
+}
+
+@keyframes textColor {
+    from {
+        text-shadow: 2px 2px rgb(97, 20, 220);
+    }
+
+    to {
+        text-shadow: 10px 10px  rgb(97, 20, 220);
     }
 }
